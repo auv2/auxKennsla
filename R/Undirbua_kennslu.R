@@ -10,14 +10,15 @@
 #' @export
 #'
 #' @examples
-#' finna_kennslutimabil(upphafs_dagur = "2023-12-01", vikudagar_nr = 1, fj_vikur = 3)
+#' finna_kennslutimabil(upphafs_dagur = "2023-08-21", vikudagar_nr = 1, fj_vikur = 3)
 
 finna_kennslutimabil <- function(upphafs_dagur,
                                  vikudagar_nr = c(1, 3),
                                  fj_vikur = 12) {
   upphafs_dagur <- lubridate::as_date(upphafs_dagur)
   vikudagar <- function(upphafs_dagur, vikudagar_nr) {
-    purrr::map(vikudagar_nr, \(nr) upphafs_dagur + lubridate::days(nr) - 1) |>
+
+    purrr::map((vikudagar_nr - min(vikudagar_nr)), \(nr) upphafs_dagur + lubridate::days(nr)) |>
       purrr::list_c()
   }
 
