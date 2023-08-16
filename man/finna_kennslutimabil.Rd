@@ -21,5 +21,5 @@ Lista med kennslu dogum
 Listar kennsludaga
 }
 \examples{
-finna_kennslutimabil(upphafs_dagur = "2023-12-01", vikudagar_nr = 1, fj_vikur = 3)
+finna_kennslutimabil(upphafs_dagur = "2023-08-21", vikudagar_nr = 1, fj_vikur = 3)
 }

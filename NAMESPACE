@@ -2,6 +2,7 @@
 
 export(finna_kennslutimabil)
 export(formata_daga)
+export(marglida)
 import(rlang)
 importFrom(glue,glue)
 importFrom(lifecycle,deprecated)
