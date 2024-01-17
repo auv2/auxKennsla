@@ -3,7 +3,7 @@
 #' @param file_name
 #'
 #' @return
-#' @export
+#' @export text sem verid er ad lesa inn
 #'
 #' @examples
 read_md <- function(file_name){
@@ -20,7 +20,7 @@ read_md <- function(file_name){
   text <- readLines(file_name)
 
   #cat(paste0(lapply(text, FUN=function(x) breakFun(x)), collapse=""))
-  text
+  return(text)
 }
 
 #' get_files
